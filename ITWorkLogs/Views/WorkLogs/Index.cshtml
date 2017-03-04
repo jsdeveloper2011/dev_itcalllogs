@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ITWorkLogs.Models.WorkLogs>
+
+@{
+    ViewBag.Title = "Task";
+}
+
+
+<div class="form-group">
+    @{Html.RenderAction("AddWork", "WorkLogs");}
+</div>
+
+@section Styles {
+    <link href="~/Content/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+
+
+
+
+
+
