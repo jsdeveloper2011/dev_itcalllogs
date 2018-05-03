@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ITWorkLogs.Models.ref_sysOfflines>
+
+@{
+    ViewBag.Title = "List of system offline";
+}
+<div id="tasklist">
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <th>Date In</th>
+                <th>Remarks</th>
+                <th>Created By</th>
+                <th>Action</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateIn)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Remarks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedBy)
+                    </td>
+                    <td>
+                        @Ajax.ActionLink("Delete", "DeleterefSysOffline", "sysoffline" ,new { id = item.ref_sysOfflineId }, new AjaxOptions { UpdateTargetId = "tasklist", OnComplete= "deleted" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    //Form submitted
+    function deleted() {
+        $('#newrefSysOffline_DateIn').val('');
+        $('#newrefSysOffline_Remarks').val('');
+        swal("Deleted", "data has  been remove.", "danger");
+    }
+</script>

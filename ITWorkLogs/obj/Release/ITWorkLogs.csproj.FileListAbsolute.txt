@@ -1,0 +1,386 @@
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\csc.exe
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\System.Collections.Immutable.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\System.Reflection.Metadata.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\vbc.exe
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\VBCSCompiler.exe
+F:\_jsc\IT_Projects\ITWorkLogs\bin\roslyn\VBCSCompiler.exe.config
+F:\_jsc\IT_Projects\ITWorkLogs\bin\ITWorkLogs.dll.config
+F:\_jsc\IT_Projects\ITWorkLogs\bin\ITWorkLogs.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\ITWorkLogs.pdb
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Antlr3.Runtime.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\EntityFramework.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\EntityFramework.SqlServer.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.Agent.Intercept.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.Web.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.WindowsServer.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.ApplicationInsights.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Google.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Web.Infrastructure.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\MySql.Data.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\MySql.Data.Entity.EF6.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\MySql.Web.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Newtonsoft.Json.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Owin.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\PagedList.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\PagedList.Mvc.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Helpers.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Mvc.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Optimization.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Razor.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.WebPages.Deployment.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.WebPages.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.WebPages.Razor.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\WebGrease.dll
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.Web.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AI.WindowsServer.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.ApplicationInsights.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\PagedList.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\PagedList.Mvc.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Helpers.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Mvc.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Optimization.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.Razor.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.WebPages.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.WebPages.Deployment.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\System.Web.WebPages.Razor.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Antlr3.Runtime.pdb
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Newtonsoft.Json.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\EntityFramework.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\EntityFramework.SqlServer.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Google.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.xml
+F:\_jsc\IT_Projects\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\_jsc\IT_Projects\ITWorkLogs\obj\Release\ITWorkLogs.csprojResolveAssemblyReference.cache
+F:\_jsc\IT_Projects\ITWorkLogs\obj\Release\ITWorkLogs.dll
+F:\_jsc\IT_Projects\ITWorkLogs\obj\Release\ITWorkLogs.pdb
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\csc.exe
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\System.Collections.Immutable.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\System.Reflection.Metadata.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\vbc.exe
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\VBCSCompiler.exe
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\roslyn\VBCSCompiler.exe.config
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\ITWorkLogs.dll.config
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\ITWorkLogs.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\ITWorkLogs.pdb
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Antlr3.Runtime.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\EntityFramework.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\EntityFramework.SqlServer.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.Agent.Intercept.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.Web.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.WindowsServer.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.ApplicationInsights.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Google.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Web.Infrastructure.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\MySql.Data.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\MySql.Data.Entity.EF6.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\MySql.Web.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Newtonsoft.Json.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Owin.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\PagedList.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\PagedList.Mvc.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Helpers.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Mvc.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Optimization.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Razor.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.WebPages.Deployment.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.WebPages.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.WebPages.Razor.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\WebGrease.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.Web.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AI.WindowsServer.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.ApplicationInsights.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\PagedList.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\PagedList.Mvc.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Helpers.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Mvc.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Optimization.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.Razor.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.WebPages.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.WebPages.Deployment.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\System.Web.WebPages.Razor.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Antlr3.Runtime.pdb
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Newtonsoft.Json.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\EntityFramework.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\EntityFramework.SqlServer.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Google.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\obj\Release\ITWorkLogs.csprojResolveAssemblyReference.cache
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\obj\Release\ITWorkLogs.dll
+F:\_jsc\IT_Projects\IT Call Logs\ITWorkLogs\obj\Release\ITWorkLogs.pdb
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\csc.exe
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\System.Collections.Immutable.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\System.Reflection.Metadata.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\vbc.exe
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\VBCSCompiler.exe
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\VBCSCompiler.exe.config
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\ITWorkLogs.dll.config
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\ITWorkLogs.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\ITWorkLogs.pdb
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Antlr3.Runtime.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.SqlServer.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.Agent.Intercept.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.Web.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.WindowsServer.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.ApplicationInsights.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Google.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Web.Infrastructure.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\MySql.Data.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\MySql.Data.Entity.EF6.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\MySql.Web.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Newtonsoft.Json.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Owin.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.Mvc.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Helpers.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Mvc.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Optimization.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Razor.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Deployment.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Razor.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\WebGrease.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.Web.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.WindowsServer.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.ApplicationInsights.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.Mvc.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Helpers.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Mvc.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Optimization.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Razor.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Deployment.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Razor.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Antlr3.Runtime.pdb
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Newtonsoft.Json.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.SqlServer.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Google.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\obj\Release\ITWorkLogs.csprojResolveAssemblyReference.cache
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\obj\Release\ITWorkLogs.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\obj\Release\ITWorkLogs.pdb
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportSource.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.Shared.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\stdole.dll
+D:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.Web.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\csc.exe
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\System.Collections.Immutable.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\System.Reflection.Metadata.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\vbc.exe
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\VBCSCompiler.exe
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\roslyn\VBCSCompiler.exe.config
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\ITWorkLogs.dll.config
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\ITWorkLogs.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\ITWorkLogs.pdb
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Antlr3.Runtime.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.CrystalReports.Engine.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportSource.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.Shared.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.Web.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.SqlServer.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.Agent.Intercept.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.Web.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.WindowsServer.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.ApplicationInsights.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Google.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Web.Infrastructure.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\MySql.Data.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\MySql.Data.Entity.EF6.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\MySql.Web.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Newtonsoft.Json.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Owin.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.Mvc.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Helpers.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Mvc.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Optimization.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Razor.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Deployment.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Razor.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\WebGrease.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\stdole.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.DependencyCollector.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.Web.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AI.WindowsServer.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.ApplicationInsights.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\PagedList.Mvc.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Helpers.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Mvc.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Optimization.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.Razor.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Deployment.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\System.Web.WebPages.Razor.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Antlr3.Runtime.pdb
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Newtonsoft.Json.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\EntityFramework.SqlServer.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Core.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Facebook.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Cookies.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.OAuth.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Google.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.Twitter.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\obj\Release\ITWorkLogs.csprojResolveAssemblyReference.cache
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\obj\Release\ITWorkLogs.dll
+G:\_wmsc\IT_Projects\wmsc_IT Projects\dev_itcalllogs\ITWorkLogs\obj\Release\ITWorkLogs.pdb

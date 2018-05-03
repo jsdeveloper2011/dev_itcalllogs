@@ -1,0 +1,130 @@
+﻿@model PagedList.IPagedList<ITWorkLogs.Models.sysOfflines>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "List of system offline";
+}
+
+<div id="tasklist">
+    <div class="table-responsive">
+        <table class="table table-striped" style="white-space:nowrap">
+            <thead>
+                <tr>
+                    <th>Date In</th>
+                    <th>Branches</th>
+                    <th>Person Concern</th>
+                    <th>Details</th>
+                    <th>Date Connected</th>
+                    <th>Created By</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+             @foreach (var item in Model) { <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateCreated)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Branches)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.personConcern)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Details)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateConnected)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedBy)
+                        </td>
+                        <td>
+                            @if (item.Details == "NO INTERNET")
+                            {
+                                @Html.Raw("<a data-modal='' href='/SysOffline/Edit/" + item.sysOfflineId + "' id='" + item.sysOfflineId + "' title='Edit'>Date connected</a>") @:|
+                                @Html.ActionLink("Add manual date", "Details", new { id = item.sysOfflineId }, new { @class = "", @role = "button" })
+                            }
+                        </td>
+                    </tr>
+                }
+</table>
+    </div>
+    <div class="pull-right"><p class="text-primary"><strong>@Model.TotalItemCount</strong> record(s)</p></div>
+    <br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(
+    Model,
+    page => Url.Action("partialsysOffline", "sysoffline", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, statusTask = ViewBag.statusTask }),
+    PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "GET", UpdateTargetId = "tasklist" }))
+</div>
+
+<!-- modal placeholder-->
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $.ajaxSetup({ cache: false });
+        $("a[data-modal]").on("click", function (e) {
+            $('#myModalContent').load(this.href, function () {
+                $('#myModal').modal({
+                    keyboard: true
+                }, 'show');
+                bindForm(this);
+            });
+            return false;
+        });
+    });
+
+    function bindForm(dialog) {
+        $('form', dialog).submit(function () {
+            $.ajax({
+                url: this.action,
+                type: this.method,
+                data: $(this).serialize(),
+                success: function (result) {
+                    if (result.success) {
+                        $('#myModal').modal('hide');
+                        $(".modal-backdrop.in").hide();
+                        swal("Done!", " Your task is edited", "success");
+                        updatePartial();
+                    }
+                }
+            });
+
+            return false;
+        });
+    }
+
+    //Updating partialview
+    function updatePartial() {
+        $.ajax({
+            url: '/sysOffline/partialsysOffline',
+            type: "GET",
+            dataType: "html",
+            data: {
+                searchString: $('#searchString').val(),
+            },
+            cache: false,
+            success: function (data) {
+
+                $("#tasklist").html(data)
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        })
+    }
+</script>
+
+
+
+
+

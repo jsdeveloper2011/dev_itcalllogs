@@ -1,0 +1,175 @@
+﻿@model PagedList.IPagedList<ITWorkLogs.Models.WorkLogs>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Task";
+}
+
+<div id="tasklist">
+    <div class="table-responsive">
+        <table class="table">
+            <tr>
+                <th>Date In</th>
+                <th>Department/Branch</th>
+                <th>Person Concern</th>
+                <th>Concern</th>
+                <th>Details</th>
+                <th>Created By</th>
+                @if (ViewBag.status == true)
+                {
+                    <th>Date Connected</th>
+                }
+                
+                <th><center>Action</center></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateIN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Department)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PersonConcern)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Concern)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Details)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedBy)
+                    </td>
+
+                    @if (ViewBag.status == true)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Remarks)
+                        </td>
+                    }
+                    <td>
+                        <center>@Ajax.ActionLink(" ", "Done", "worklogs", new { id = item.WorkID }, new AjaxOptions { OnSuccess = "success('" + item.WorkID + "')" }, new { @class = "glyphicon glyphicon-floppy-saved", @role = "button" }) |
+                        @Html.Raw("<a data-modal='' href='/worklogs/edit/" + item.WorkID + "' id='" + item.WorkID + "' title='Edit'> <span class='glyphicon glyphicon-edit'> </span> </a>")</center>
+                    </td>
+    
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="pull-right"><p class="text-primary"><strong>@Model.TotalItemCount</strong> record(s)</p></div>
+    <br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(
+    Model,
+    page => Url.Action("manualtasks", "worklogs", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, statusTask = ViewBag.statusTask }),
+    PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "GET", UpdateTargetId = "tasklist" }))
+
+</div>
+
+<!-- modal placeholder-->
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $(function () {
+        $.ajaxSetup({ cache: false });
+        $("a[data-modal]").on("click", function (e) {
+            $('#myModalContent').load(this.href, function () {
+                $('#myModal').modal({
+                    keyboard: true
+                }, 'show');
+                bindForm(this);
+            });
+            return false;
+        });
+    });
+
+    function bindForm(dialog) {
+        $('form', dialog).submit(function () {
+            $.ajax({
+                url: this.action,
+                type: this.method,
+                data: $(this).serialize(),
+                success: function (result) {
+                    if (result.success) {
+                        $('#myModal').modal('hide');
+                        $(".modal-backdrop.in").hide();
+                        swal("Done!", " Your task is edited", "success");
+                        updatePartial();
+                    }
+                }
+            });
+
+            return false;
+        });
+    }
+
+    function success(id) {
+        swal({
+            title: "Work done details:",
+            text: "<textarea id='text' , style = 'text-transform:uppercase', rows='5' cols='60'></textarea>",
+            // ----------------- define html element with id
+            html: true,
+            showCloseButton: true,
+            closeOnConfirm: true,
+        }, function () {
+            // get value using textarea id
+            var inputValue = document.getElementById('text').value;
+            if (inputValue != "") {
+                var objdata = { "remarks": inputValue, "id": id };
+                $.ajax({
+                    url: '/Worklogs/Remarks',
+                    type: 'POST',
+                    data: objdata,
+                    success: function (data) {
+                        swal("Good job!", " Your remarks is already saved.", "success");
+                        updatePartial();//refresh partialview...
+                    },
+
+                    error: function () { swal("error"); }
+                });
+            }
+            else {
+                swal.showInputError("You need to write something!");
+            }
+        });
+    }
+
+    //searching task...
+    $("#searchTask").click(function () {
+        updatePartial();
+    });
+
+    //Updating partialview
+    function updatePartial() {
+        $.ajax({
+            url: '/WorkLogs/manualtasks',
+            type: "GET",
+            dataType: "html",
+            data: {
+                searchString: $('#searchString').val(),
+                statusTask: $('#statusTask').val(),
+            },
+            cache: false,
+            success: function (data) {
+                $("#tasklist").html(data)
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        })
+    }
+</script>
+

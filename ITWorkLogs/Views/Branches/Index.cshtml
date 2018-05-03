@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ITWorkLogs.Models.Branches>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2><i>List of branches</i></h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BRANCHCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BRANCHNAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BRANCHCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BRANCHNAME)
+        </td>
+        <td>
+            @Html.ActionLink(" ", "Edit", new { id=item.BranchID }, new { @class = "glyphicon glyphicon-edit", @role = "button" }) |
+            @Html.ActionLink(" ", "Details", new { id=item.BranchID }, new { @class = "glyphicon glyphicon-eye-open", @role = "button" }) 
+            
+            @if (User.IsInRole("Admin"))
+            {   
+                @:|@Html.ActionLink(" ", "Delete", new { id = item.BranchID }, new { @class = "glyphicon glyphicon-trash", @role = "button" })
+            }
+        </td>
+    </tr>
+}
+
+</table>

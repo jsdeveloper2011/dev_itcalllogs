@@ -1,0 +1,516 @@
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS `db_itworklogs`.`insertbranches` $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `insertbranches`()
+BEGIN
+
+
+
+insert into BRANCHES (branchcode,branchname)VALUES ('BBA1','Motomura Bodega (MB)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('BCN1','Cabanatuan Bargain (MB)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('BSP1','San Pedro (MB)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('BSR1','Sta. Rosa Bargain (MB)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HAA1','Aliaga (MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HAO1','Antipolo(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HAT1','Apalit(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HBA1','Buendia(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HBE1','Bocaue(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HBI1','Binangonan (MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HBL1','Binan(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HBN1','Binalonan(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HBO1','Bongabon (MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HCA1','Calamba(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HCN1','Cabanatuan(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HCN2','Nabao Cab(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HCO1','Cabiao (MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HCP1','Cuyapo(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HDO1','Davao(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HDS1','Dasmarinas(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HGE1','M Cebu(MV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HLU1','La Union(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HMA1','Minglanilla(MV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HMS1','Malolos(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HMZ1','Munoz(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HO','Head Office');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HOO1','Olongapo(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HSF1','San Fernando(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HSO1','Santiago (MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HSP1','Motorista-San Pedro(MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('HTO1','Tuguegarao (MM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('KAS1','Angeles(MS)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('L3S1','3S\' Shop(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LAA1','Aliaga(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LAI1','Alicia(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LAP1','Arayat(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LAS1','Angeles(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LAS2','Angeles 2(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LAT1','Apalit(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBA1','Balanga(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBB1','Cab-Suzuki BB(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBE1','Bocaue(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBG1','Baliuag(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBK1','Cab-Kawasaki BB(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBM1','Bambang(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBN1','Bayambang(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBP1','Binalonan (WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LBS1','Balagtas (WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LCG1','Camiling(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LCL1','Calasiao(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LCN1','Suzuki Cabanatuan(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LCO1','Cabiao(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LCP1','Cuyapo(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LCS1','Capas(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LCT1','Concepcion(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LDN1','Dinalupihan(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LFA1','Floridablanca(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LGA1','Guagua(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LGN1','Gapan(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LJN1','Jaen(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LLA1','Llanera(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LLN1','Lupao(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LLO1','Lubao(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LLR1','Laur(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LMM1','Mangatarem(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LMN1','Main(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LMO1','Marilao(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LMS1','Malolos(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LMX1','Mexico(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LMY1','Meycauayan(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LMZ1','Munoz(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LNS1','Novaliches(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LNS2','invalid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LOI1','Orani(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LOO1','Olongapo(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LPA1','Penaranda(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LPI1','Paniqui(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LPL1','Plaridel(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LPN1','Pulilan (WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LRL1','Rizal(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LRO1','Rosario(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LRS1','Rosales(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSB1','San Miguel(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSD1','Sto. Domingo(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSF1','San Fernando(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSI1','San Mateo(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSJ1','San Jose(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSL1','San Leonardo(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSM1','Sta. Maria(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSN1','San Isidro(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LSO1','Santiago(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LTC1','not valid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LTC2','Tarlac(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LTG1','TVS Guimba(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LVA1','Valenzuela(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LVS1','Villasis(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LVT1','Victoria(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LWS1','WBS - WAREHOUSE');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYA1','Yamaha Apalit(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYB1','Yamaha Norzagaray(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYC1','Yamaha Cabiao(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYH1','Yamaha Hagonoy(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYI1','Yamaha Candon(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYL1','Yamaha Naguilian(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYM1','Yamaha Mangaldan(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYN1','Yamaha-Nova(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYO1','Yamaha Orani(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYP1','Yamaha Malasiqui (WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYR1','Yamaha Rizal (WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYS1','Yamaha Sta. Rosa(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYT1','Yamaha Bacnotan(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYU1','Yamaha Bustos (WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('LYZ1','Yamaha Olongapo(WL)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MAN1','Apokon(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MBA1','Bajada(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MCN1','For branch assignment');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MCO1','Cagayan De Oro(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MCO2','Cagayan De Oro2(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MCO3','Cagayan De Oro 3(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MDC1','Don Carlos(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MDS1','Digos (WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MDY1','Dalisay(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MMA1','Maa(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MMD1','Matina (WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MMG1','Maramag (WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MMY1','Malaybalay(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MPO1','Panabo(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MPO1(WM)','Invalid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MQN1','Quezon(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MTL1','Toril(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MTM1','Tagum(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MTM1(WM)','Invalid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('MVA1','Valencia(WM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PAO1','Agoo(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PBC1','Batac(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PBG1','Bantug(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PBN1','Bongabon(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PCI1','Candon(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PCN1','Cauayan(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PDN1','Dagupan(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PGA1','Guimba(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PGN1','Gapan(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PKI1','Kawasaki(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PKI2','Kawasaki(PM)2 - Spareparts');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PLG1','Laoag(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PLN1','Lingayen(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PLU1','La Union(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PMG1','Manaoag(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PMN1','Main(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PRS1','Roxas(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PSC1','San Carlos(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PSO1','Solano(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PSR1','Sta. Rosa(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PTA1','Talavera(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PTB1','Tuguegarao 3(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PTO1','Tuguegarao(PM)-Invalid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PUA1','Urdaneta(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PVN1','Vigan(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('PZA1','Zaragosa(PM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RAA1','Araneta(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RAO1','Antipolo(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RAS1','Abad Santos(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBA 2','Invalid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBA1','Buendia(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBB1','B-Suzuki BB (RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBI1','Binangonan(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBK1','B-Kawasaki BB(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBN1','Binan(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBR1','Bacoor(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RBS1','Batangas(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RCA1','Calamba(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RCO1','Cubao(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RCR1','Cainta(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RDS1','Dasmarinas(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('REA1','Espana(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RIB1','Imus Kawasaki BB(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RIS1','Imus(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RKB1','KTM Buendia(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RKT1','Kawit (RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RLA1','Lipa(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RLB1','Los Banos(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RLP1','Las Pinas(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RLY1','Lemery (RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RMA1','Marikina(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RNC1','Naic(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RPG1','Pasig(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RRB1','Rosario Batangas(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RRO1','Invalid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RSB1','Shaw Blvd.(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RSC1','Sta. Cruz (RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RSN1','Sangandaan(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RSO1','San Pablo(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RSP1','San Pedro(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RSR1','Sta. Rosa(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RST1','Sucat(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RTA1','Tanza(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RTM1','Trece Martires (RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RTY1','Taytay(RM)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('RWH1','Marconi Warehouse');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VBD1','Bacolod(WV)merge');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VBD2','Bacolod 2(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VBD3','Bacolod 3(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VBO1','Bogo(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VBS1','Bais(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VCN1','Carmen(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VCN2','Carmen Bohol(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VCS1','Cortes(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VCU1','Guadalupe(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VCZ1','Cadiz(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VDE1','Dumaguete(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VEA1','Estancia(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VFE1','Fuente Osmena (WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VIO1','Legacy code');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VIO2','Ilo-Ilo 2(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VIW1','Ilo-Ilo Warehouse(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VJA1','Jagna(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VJI1','Jaro Ilo-Ilo(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VLB1','Loon (WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VLI1','Liloan(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VLI2','Liloan 2(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VLN1','Labogon(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VLU1','Lapulapu(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VMA2','Minglanilla 2(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VMC1','Minglanilla (WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VNA1','Naga(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VPI1','Passi (WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VPO1','Pardo(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VPO1(WV)','Invalid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VRA1','For branch assignment');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VRS1','Roxas(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VSY1','Silay(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VTB1','Talibon(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VTG1','Tubigon(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VTN1','Tagbilaran(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VTN2','Tagbilaran 2(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VTY1','Talisay(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VUY1','Ubay(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VWH1','Visayas Warehouse');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VYC1','Yamaha Carmen(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VYS1','Yamaha Silay(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('VYV1','Yamaha Victorias(WV)');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WBA1','Wheeltek - Bodega');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WBS','Wheeltek WBS - Spareparts');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WCB1','CABANATUAN CITY - BITAS');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WPC1','PALAYAN CITY - WAREHOUSE');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WRC1','Sta. Rosa Recon Warehouse');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WRL1','Rizal(WL)- not valid');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WSR1','STA ROSA - WAREHOUSE');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('WSR2','STA ROSA MAPALAD - WAREHOUSE');
+
+insert into BRANCHES (branchcode,branchname)VALUES ('ZQWH','MC - Holding Co.');
+
+
+	
+	
+
+
+END $$
+
+DELIMITER ;

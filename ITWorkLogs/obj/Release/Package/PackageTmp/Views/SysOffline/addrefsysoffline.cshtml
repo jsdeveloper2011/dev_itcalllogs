@@ -1,0 +1,43 @@
+﻿@model ITWorkLogs.Models.ref_sysOfflineViewModel
+
+    @Html.ValidationSummary(true)
+
+    @using (Ajax.BeginForm("addrefSysOffline", new AjaxOptions { UpdateTargetId = "listrefsysoffline", OnComplete = "save" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <fieldset>
+            <legend><i>Add - branch manual date</i></legend>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.newrefSysOffline.DateIn, new { @class = "form-control datepicker", placeholder = "Enter manual date here..." })
+                        @Html.ValidationMessageFor(model => model.newrefSysOffline.DateIn, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.newrefSysOffline.Remarks, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Details" } })
+                        @Html.ValidationMessageFor(model => model.newrefSysOffline.Remarks, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-1 pull-left">
+                        <input type="submit" value="Add" class="btn btn-success btn-md" id="addtaskbutton" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    <br />
+        
+        <h3><i>List of manual date</i></h3>
+        <div class="col-md-12" id='listrefsysoffline'>
+            @{ Html.RenderPartial("partialrefsysOffline", Model.ref_sysOffline); }
+        </div>
+    }
+
+<script type="text/javascript">
+    //Form submitted
+    function save() {
+        $('#newrefSysOffline_DateIn').val('');
+        $('#newrefSysOffline_Remarks').val('');
+        swal("Good job!", "data has  been saved.", "success");
+    }
+</script>

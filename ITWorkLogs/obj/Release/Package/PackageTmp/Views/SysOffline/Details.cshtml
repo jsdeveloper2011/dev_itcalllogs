@@ -1,0 +1,51 @@
+﻿@model ITWorkLogs.Models.sysOfflines
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@Html.HiddenFor(m=>m.sysOfflineId)
+<div style="padding-top: 50px">
+    <h4><i><u>Details of @Model.Branches</u></i></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Branches)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Branches)
+        </dd>
+        <dt>
+            @Html.DisplayName("Person Concern")
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.personConcern)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+    </dl>
+
+    <div class="form-group">
+        @{Html.RenderAction("addrefsysoffline", "sysoffline", new { id = Model.sysOfflineId});}
+    </div>
+</div>
+
+@section scripts{
+@Scripts.Render("~/bundles/jqueryval")
+<link href="~/Content/jquery-ui.css" rel="stylesheet" /> @*for datepicker*@
+
+    <script type="text/javascript">
+        $(function () { // will trigger when the document is ready
+            $('.datepicker').datepicker(
+                {
+                    changeMonth: true,
+                    changeYear: true
+                }); //Initialise any date pickers
+        });
+    </script>
+}
+

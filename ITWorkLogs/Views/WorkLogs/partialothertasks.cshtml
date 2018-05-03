@@ -1,0 +1,207 @@
+﻿@model PagedList.IPagedList<ITWorkLogs.Models.WorkLogs>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Task";
+}
+
+<div id="tasklist">
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <tr>
+                <th>Date In</th>
+                <th>Personnel</th>
+                <th>Department/Branch</th>
+                <th>Person Concern</th>
+                <th>Concern</th>
+                <th>Details</th>
+                <th>Action</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateIN)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Personnel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Department)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PersonConcern)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Concern)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Details)
+                    </td>
+
+                    @if (item.Status != "CN"  && item.Status != "DONE" )
+                    {
+                        <td>
+                            @Html.Raw("<a data-modal='' href='/worklogs/Details/" + item.WorkID + "' id='" + item.WorkID + "' title='Detail'> <span class='glyphicon glyphicon-eye-open'> </span> </a>") |
+                            @Ajax.ActionLink(" ", "Done", "worklogs", new { id = item.WorkID }, new AjaxOptions { OnSuccess = "success('" + item.WorkID + "')" }, new { @class = "glyphicon glyphicon-floppy-saved", @role = "button" }) |
+                            @Html.Raw("<a data-modal='' href='/worklogs/edit/" + item.WorkID + "' id='" + item.WorkID + "' title='Edit'> <span class='glyphicon glyphicon-edit'> </span> </a>") |
+                            @Ajax.ActionLink(" ", "Cancel", "worklogs", new { id = item.WorkID }, new AjaxOptions { OnSuccess = "cancel('" + item.WorkID + "')" }, new { @class = "glyphicon glyphicon-trash", @role = "button" }) 
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            <center>@Html.Raw("<a data-modal='' href='/worklogs/Details/" + item.WorkID + "' id='" + item.WorkID + "' title='Detail'> <span class='glyphicon glyphicon-eye-open'> </span> </a>") </center>
+                        </td>
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="pull-right"><p class="text-primary"><strong>@Model.TotalItemCount</strong> record(s)</p></div>
+    <br />
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(
+    Model,
+    page => Url.Action("partialothertasks", "worklogs", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter, statusTask = ViewBag.statusTask }),
+    PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "GET", UpdateTargetId = "tasklist" }))
+
+</div>
+
+<!-- modal placeholder-->
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $.ajaxSetup({ cache: false });
+        $("a[data-modal]").on("click", function (e) {
+            $('#myModalContent').load(this.href, function () {
+                $('#myModal').modal({
+                    keyboard: true
+                }, 'show');
+                bindForm(this);
+            });
+            return false;
+        });
+    });
+
+    function bindForm(dialog) {
+        $('form', dialog).submit(function () {
+            $.ajax({
+                url: this.action,
+                type: this.method,
+                data: $(this).serialize(),
+                success: function (result) {
+                    if (result.success) {
+                        $('#myModal').modal('hide');
+                        $(".modal-backdrop.in").hide();
+                        swal("Done!", " Your task is edited", "success");
+                        updatePartial();
+                    }
+                }
+            });
+
+            return false;
+        });
+    }
+
+    function success(id) {
+        swal({
+            title: "Work done details:",
+            text: "<textarea id='text' , style = 'text-transform:uppercase', rows='5' cols='60'></textarea>",
+            // ----------------- define html element with id
+            html: true,
+            showCloseButton: true,
+            closeOnConfirm: true,
+        }, function () {
+            // get value using textarea id
+            var inputValue = document.getElementById('text').value;
+            if (inputValue != "") {
+                var objdata = { "remarks": inputValue, "id": id };
+                $.ajax({
+                    url: '/Worklogs/Remarks',
+                    type: 'POST',
+                    data: objdata,
+                    success: function (data) {
+                        swal("Good job!", " Your remarks is already saved.", "success");
+                        updatePartial();//refresh partialview...
+                    },
+
+                    error: function () { swal("error"); }
+                });
+            }
+            else {
+                swal.showInputError("You need to write something!");
+            }
+        });
+    }
+
+    function cancel(id) {
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this task",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel it!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+         function (isConfirm) {
+             if (isConfirm) {
+
+                 var objdata = { "id": id };
+                 $.ajax({
+                     url: '/Worklogs/Cancelled',
+                     type: 'POST',
+                     data: objdata,
+                     success: function (data) {
+
+                         updatePartial();
+                         swal("Deleted!", "This task  has been deleted.", "success");
+                     },
+                     error: function () { swal("error"); }
+                 });
+
+             } else {
+                 swal("Cancelled", "This task is safe :)", "error");
+             }
+         });
+    }
+
+    //searching task...
+    $("#searchTask").click(function () {
+        updatePartial();
+    });
+
+    //Updating partialview
+    function updatePartial() {
+        $.ajax({
+            url: '/WorkLogs/partialothertasks',
+            type: "GET",
+            dataType: "html",
+            data: {
+                searchString: $('#searchString').val(),
+                statusTask: $('#statusTask').val(),
+            },
+            cache: false,
+            success: function (data) {
+                $("#tasklist").html(data)
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        })
+    }
+</script>
+

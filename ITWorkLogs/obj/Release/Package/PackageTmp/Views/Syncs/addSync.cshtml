@@ -1,0 +1,103 @@
+﻿@model ITWorkLogs.Models.SyncViewMoodel
+
+@Html.ValidationSummary(true)
+
+@using (Ajax.BeginForm("AddSync", new AjaxOptions { OnComplete = "save" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div style="padding-top:50px"></div>
+    <form>
+        <fieldset>
+            <legend><i>Add task - Synching problem</i></legend>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.DropDownListFor(model => model.newSync.Personnel, (SelectList)ViewBag.Name, "Select Personnel", htmlAttributes: new { @style = "text-transform:uppercase", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.newSync.Personnel, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-md-3">
+                        @Html.DropDownListFor(model => model.newSync.Branches, (SelectList)ViewBag.Branches, "Select Branches", htmlAttributes: new { @style = "text-transform:uppercase", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.newSync.Branches, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.newSync.Reason, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Reason" } })
+                        @Html.ValidationMessageFor(model => model.newSync.Reason, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.newSync.Downloading, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "DL" } })
+                        @Html.ValidationMessageFor(model => model.newSync.Downloading, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-1">
+                        @Html.EditorFor(model => model.newSync.Uploading, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "UL" } })
+                        @Html.ValidationMessageFor(model => model.newSync.Uploading, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-pull-1">
+                        <input type="submit" value="Add" class="btn btn-success btn-md" id="addtaskbutton" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <hr />
+
+    <div class="form-inline pull-left">
+        <h3><u><i>My tasks</i></u></h3><br />
+        <div class="form-group">
+            @Html.DropDownList("statusTask", ViewData["status"] as List<SelectListItem>, htmlAttributes: new { @class = "form-control" })
+        </div>
+    </div><br /><br /><br />
+
+    <div class="form-inline pull-right">
+        <div class="form-group">
+            <label for="searchString" class="sr-only">Search</label>
+            @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+        </div>
+        <button type="submit" id="searchTask" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+    </div><br /><br /><br />
+
+    <div id="partial"></div>
+}
+
+<script type="text/javascript">
+    updatePartial();//firs load partial...
+    $("#statusTask").change(updatePartial);
+
+    //searching task...
+    $("#searchTask").click(function () {
+        updatePartial();
+    });
+
+    //Updating partialview
+    function updatePartial() {
+        $.ajax({
+            url: '/syncs/partialsynclogs',
+            type: "GET",
+            dataType: "html",
+            data: {
+                statusTask: $('#statusTask').val(),
+            },
+            cache: false,
+            success: function (data) {
+                $("#partial").html(data)
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        })
+    }
+
+    //Form submitted
+    function save() {
+        $('#newSync_Branches').val('');
+        $('#newSync_Reason').val('');
+        $('#newSync_Downloading').val('');
+        $('#newSync_Uploading').val('');
+        swal("Good job!", "task has  been saved.", "success");
+        updatePartial();
+    }
+
+</script>

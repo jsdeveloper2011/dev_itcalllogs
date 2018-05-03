@@ -1,0 +1,242 @@
+﻿@model ITWorkLogs.Models.Sync
+
+@Html.ValidationSummary(true)
+
+@using (Ajax.BeginForm("AddWork", new AjaxOptions { OnComplete = "save" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div style="padding-top:50px"></div>
+    <form>
+        <fieldset>
+            <legend><i>Add task</i></legend>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.newWorkLogs.Department, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Branch/Department" } })
+                        @Html.ValidationMessageFor(model => model.newWorkLogs.Department, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.newWorkLogs.PersonConcern, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Person Concern" } })
+                        @Html.ValidationMessageFor(model => model.newWorkLogs.PersonConcern, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div><br />
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.newWorkLogs.Concern, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Concern" } })
+                        @Html.ValidationMessageFor(model => model.newWorkLogs.Concern, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.newWorkLogs.Details, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Details - example: TeamviewerID 12345678/Default" } })
+                        @Html.ValidationMessageFor(model => model.newWorkLogs.Details, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div><br />
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="submit" value="Submit" class="btn btn-success btn-lg pull-right" id="addtaskbutton" />
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <hr />
+
+        <div class="form-inline pull-left">
+            <h3><u><i>My tasks</i></u></h3><br />
+            <div class="form-group">
+                @Html.DropDownList("statusTask", ViewData["status"] as List<SelectListItem>, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div><br /><br /><br />
+
+        <div class="form-inline pull-right">
+            <div class="form-group">
+                <label for="searchString" class="sr-only">Search</label>
+                @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+            </div>
+            <button type="submit" id="searchTask" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </div><br /><br /><br />
+
+        <div id="partial"></div>
+}
+
+<link href="~/Content/Autocomplete.css" rel="stylesheet" />
+<script type="text/javascript">
+
+    updatePartial();//firs load partial...
+    $("#statusTask").change(updatePartial);
+
+    //Autocomplete for branches..
+    $("#newWorkLogs_Department").autocomplete({
+        minLength: 2,
+        source: function (request, response) {
+            $.ajax({
+                url: "/WorkLogs/autoCompleteBranches",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    term: request.term,
+                },
+                success: function (data) {
+                    response($.map(data, function (item) {
+                        return {
+                            label: item.BRANCHNAME + " " + "(" + item.BRANCHCODE + ")",
+                            value: item.BRANCHNAME + " " + "(" + item.BRANCHCODE + ")"
+                        };
+
+                    }))
+                }
+            })
+        },
+
+        select: function (event, ui) {
+            $("#newWorkLogs_Department").val(ui.item.value)
+        },
+
+        messages: {
+            noResults: "",
+            results: function (count) {
+                return count + (count > 1 ? ' results' : ' result ') + ' found';
+            }
+        }
+    })
+    //Autocomplete for personconcern...
+    $("#newWorkLogs_PersonConcern").autocomplete({
+        minLength: 3,
+        source: function (request, response) {
+            $.ajax({
+                url: "/WorkLogs/autoCompletePersonConcern",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    term: request.term,
+                },
+                success: function (data) {
+                    response($.map(data, function (item) {
+                        return {
+                            label: item.PersonConcern,
+                            value: item.PersonConcern,
+                        };
+
+                    }))
+                }
+            })
+        },
+
+        select: function (event, ui) {
+            $("#newWorkLogs_PersonConcern").val(ui.item.value)
+        },
+
+        messages: {
+            noResults: "",
+            results: function (count) {
+                return count + (count > 1 ? ' results' : ' result ') + ' found';
+            }
+        }
+    })
+    //Autocomplete for concern...
+    $("#newWorkLogs_Concern").autocomplete({
+        minLength: 3,
+        source: function (request, response) {
+            $.ajax({
+                url: "/WorkLogs/autoCompleteConcern",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    term: request.term,
+                },
+                success: function (data) {
+                    response($.map(data, function (item) {
+                        return {
+                            label: item.Concern,
+                            value: item.Concern,
+                        };
+
+                    }))
+                }
+            })
+        },
+
+        select: function (event, ui) {
+            $("#newWorkLogs_Concern").val(ui.item.value)
+        },
+
+        messages: {
+            noResults: "",
+            results: function (count) {
+                return count + (count > 1 ? ' results' : ' result ') + ' found';
+            }
+        }
+    })
+    //Autocomplete for details...
+    $("#newWorkLogs_Details").autocomplete({
+        minLength: 3,
+        source: function (request, response) {
+            $.ajax({
+                url: "/WorkLogs/autoCompleteDetails",
+                type: "POST",
+                dataType: "json",
+                data: {
+                    term: request.term,
+                },
+                success: function (data) {
+                    response($.map(data, function (item) {
+                        return {
+                            label: item.Details,
+                            value: item.Details,
+                        };
+
+                    }))
+                }
+            })
+        },
+
+        select: function (event, ui) {
+            $("#newWorkLogs_Details").val(ui.item.value)
+        },
+
+        messages: {
+            noResults: "",
+            results: function (count) {
+                return count + (count > 1 ? ' results' : ' result ') + ' found';
+            }
+        }
+    })
+    //searching task...
+    $("#searchTask").click(function () {
+        updatePartial();
+    });
+
+    //Updating partialview
+    function updatePartial() {
+        $.ajax({
+            url: '/WorkLogs/partialworklogs',
+            type: "GET",
+            dataType: "html",
+            data: {
+                statusTask: $('#statusTask').val(),
+            },
+            cache: false,
+            success: function (data) {
+                $("#partial").html(data)
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        })
+    }
+
+    //Form submitted
+    function save() {
+        $('#newWorkLogs_Department').val('');
+        $('#newWorkLogs_PersonConcern').val('');
+        $('#newWorkLogs_Concern').val('');
+        $('#newWorkLogs_Details').val('');
+        swal("Good job!", "task has  been saved.", "success");
+        updatePartial();
+    }
+
+</script>

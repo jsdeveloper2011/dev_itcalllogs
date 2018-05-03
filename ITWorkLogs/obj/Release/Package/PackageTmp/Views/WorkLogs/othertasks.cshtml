@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Task";
+}
+
+<div class="form-inline pull-left">
+    <h3><u><i>Other tasks</i></u></h3><br />
+    <div class="form-group">
+        @Html.DropDownList("statusTask", ViewData["status"] as List<SelectListItem>, htmlAttributes: new { @class = "form-control" })
+    </div>
+</div><br /><br /><br />
+
+<div style="padding-top: 10px" class="form-inline pull-right">
+    <div class="form-group">
+        <label for="searchString" class="sr-only">Search</label>
+        @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+    </div>
+    <button type="submit" id="searchTask" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+</div><br /><br /><br />
+
+<div id="partial"></div>
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    updatePartial();//firs load partial...
+    $("#statusTask").change(updatePartial);
+
+    //Updating partialview
+    function updatePartial() {
+        $.ajax({
+            url: '/WorkLogs/partialothertasks',
+            type: "GET",
+            dataType: "html",
+            data: {
+                statusTask: $('#statusTask').val(),
+            },
+            cache: false,
+            success: function (data) {
+                $("#partial").html(data)
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        })
+    }
+</script>
+
+
+
+

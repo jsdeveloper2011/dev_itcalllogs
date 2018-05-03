@@ -1,0 +1,84 @@
+﻿@model ITWorkLogs.Models.sysOfflineViewModel
+
+@Html.ValidationSummary(true)
+
+@using (Ajax.BeginForm("AddSysOffline", new AjaxOptions { OnComplete="save" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div style="padding-top:50px"></div>
+    <form>
+        <fieldset>
+            <legend><i>Add branches that manual</i></legend>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        @Html.DropDownListFor(model => model.newSysOffline.Branches, (SelectList)ViewBag.Branches, "Select Branches", htmlAttributes: new { @style = "text-transform:uppercase", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.newSysOffline.Branches, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.newSysOffline.personConcern, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Person Concern" } })
+                        @Html.ValidationMessageFor(model => model.newSysOffline.personConcern, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.newSysOffline.Details, new { htmlAttributes = new { @style = "text-transform:uppercase", @class = "form-control", placeholder = "Details" } })
+                        @Html.ValidationMessageFor(model => model.newSysOffline.Details, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="col-md-1 pull-left">
+                        <input type="submit" value="Add" class="btn btn-success btn-md" id="addtaskbutton" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form><br /><hr />
+
+    <h3><i>List of branches</i></h3>
+    <div class="form-inline pull-right">
+        <div class="form-group">
+            <label for="searchString" class="sr-only">Search</label>
+            @Html.TextBox("searchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+        </div>
+        <button type="submit" id="searchTask" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+    </div><br /><br /><br />
+
+    <div id="partial"></div>
+}
+
+<script type="text/javascript">
+    updatePartial();//firs load partial...
+    //searching task...
+    $("#searchTask").click(function () {
+        updatePartial();
+    });
+
+    //Updating partialview
+    function updatePartial() {
+        $.ajax({
+            url: '/sysOffline/partialsysOffline',
+            type: "GET",
+            dataType: "html",
+            data: {
+                //dropdownlist possible
+            },
+            cache: false,
+            success: function (data) {
+                $("#partial").html(data)
+            },
+            error: function (xhr, status, error) {
+                alert(xhr.responseText);
+            }
+        })
+    }
+
+    //Form submitted
+    function save() {
+        $('#newSysOffline_personConcern').val('');
+        $('#newSysOffline_Details').val('');
+        swal("Good job!", "task has  been saved.", "success");
+        updatePartial();
+    }
+
+</script>

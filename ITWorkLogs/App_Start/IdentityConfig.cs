@@ -46,46 +46,7 @@ namespace ITWorkLogs
         //Create User=admin with password=Admin@2017 in the Admin role        
         public static void InitializeIdentityForEF(ApplicationDbContext db)
         {
-            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
-            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
-            const string firstname = "John Sonny";
-            const string lastname = "Cruz";
-            const string fullname = firstname + " " + lastname;
-            const string username = "itdept";
-            const string email = "johnsonnycruz@gmail.com";
-            const string password = "Admin@2017";
-            const string roleName = "Admin";
 
-            //Create Role Admin if it does not exist
-            var role = roleManager.FindByName(roleName);
-            if (role == null)
-            {
-                role = new IdentityRole(roleName);
-                var roleresult = roleManager.Create(role);
-            }
-
-            var user = userManager.FindByName(username);
-            if (user == null)
-            {
-                user = new ApplicationUser
-                {
-                    FirstName = firstname,
-                    LastName = lastname,
-                    FullName = fullname,
-                    UserName = username,   
-                    Email = email
-                };
-
-                var result = userManager.Create(user, password);
-                result = userManager.SetLockoutEnabled(user.Id, false);
-            }
-
-            // Add user admin to Role Admin if not already added
-            var rolesForUser = userManager.GetRoles(user.Id);
-            if (!rolesForUser.Contains(role.Name))
-            {
-                var result = userManager.AddToRole(user.Id, role.Name);
-            }
         }
     }
 

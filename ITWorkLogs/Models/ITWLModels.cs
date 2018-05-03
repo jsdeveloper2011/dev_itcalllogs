@@ -13,20 +13,26 @@ namespace ITWorkLogs.Models
         [Display(Name ="Control No.")]
         public string ControlID { get; set; }
 
+        [Required]
         public string Personnel { get; set; }
 
         [Display(Name ="Dept./Branch")]
         [Required]
         public string Department { get; set; }
         
+        [Required]
         [Display(Name ="Person Concern")]
         public string PersonConcern { get; set; }
+
         [Required]
         [DataType(DataType.MultilineText)]
         public string Concern { get; set; }
+
         [Required]
         [DataType(DataType.MultilineText)]
         public string Details { get; set; }
+
+        [DataType(DataType.MultilineText)]
         public string Remarks { get; set; }
 
         //Status List : ONGOING,PENDING,TRANSFERED, DONE
@@ -59,9 +65,15 @@ namespace ITWorkLogs.Models
         //always include in tables
         [Display(Name = "CREATED BY")]
         public string CreatedBy { get; set; }
+
+
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy - hh:mm tt}", ApplyFormatInEditMode = true)]
         [Display(Name = "DATE/TIME IN")]
-        public DateTime? DateCreated { get; set; }
+        public DateTime DateIN { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy - hh:mm tt}", ApplyFormatInEditMode = true)]
+        public DateTime DateCreated { get; set; }
+
         [Display(Name = "MODIFIED BY")]
         public string ModifiedBy { get; set; }
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy - hh:mm tt}", ApplyFormatInEditMode = true)]
@@ -81,4 +93,80 @@ namespace ITWorkLogs.Models
         public string BRANCHCODE { get; set; }
         public string BRANCHNAME { get; set; }
     }
+
+    public class Sync
+    {
+        [Key]
+        public int SynchId { get; set; }
+
+        [Required]
+        public string Branches { get; set; }
+
+        [Required]
+        public string Personnel { get; set; }
+
+        [Required]
+        public string Reason { get; set; }
+
+        public string Status { get; set; }
+
+        [Display(Name = "DATE/TIME CREATED")]
+        public DateTime? DateIn { get; set; }
+
+        [Display(Name = "DATE/TIME STARTED")]
+        public DateTime? TimeStarted { get; set; }
+
+        [Display(Name = "DATE/TIME ENDED")]
+        public DateTime? TimeEnded { get; set; }
+
+        public string Downloading { get; set; }
+        public string Uploading { get; set; }
+
+        public bool Others { get; set; }
+
+        //required in creating table..
+        [Display(Name = "CREATED BY")]
+        public string CreatedBy { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy - hh:mm tt}", ApplyFormatInEditMode = true)]
+        public DateTime DateCreated { get; set; }
+
+        [Display(Name = "MODIFIED BY")]
+        public string ModifiedBy { get; set; }
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy - hh:mm tt}", ApplyFormatInEditMode = true)]
+
+        [Display(Name = "DATE/TIME MODIFIED")]
+        public DateTime? DateModified { get; set; }
+
+    }
+
+    public class ref_syncerrors
+    {
+        [Key]
+        public int SyncErrorId { get; set; }
+
+        public int SyncId { get; set; }
+
+        [Required]
+        public string ProblemEncountered { get; set; }
+
+        public string Solution { get; set; }
+
+        //required in creating table..
+        [Display(Name = "CREATED BY")]
+        public string CreatedBy { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy - hh:mm tt}", ApplyFormatInEditMode = true)]
+        public DateTime DateCreated { get; set; }
+
+        [Display(Name = "MODIFIED BY")]
+        public string ModifiedBy { get; set; }
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy - hh:mm tt}", ApplyFormatInEditMode = true)]
+
+        [Display(Name = "DATE/TIME MODIFIED")]
+        public DateTime? DateModified { get; set; }
+
+        public virtual Sync sync { get; set; }
+    }
+
 }

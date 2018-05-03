@@ -6,7 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ITWorkLogs.Models;
-
+using System.Data.Entity;
+using System.Net;
+using System;
 
 namespace ITWorkLogs.Controllers
 {
@@ -22,7 +24,7 @@ namespace ITWorkLogs.Controllers
             context = new ApplicationDbContext();
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -34,9 +36,9 @@ namespace ITWorkLogs.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set 
-            { 
-                _signInManager = value; 
+            private set
+            {
+                _signInManager = value;
             }
         }
 
@@ -79,7 +81,7 @@ namespace ITWorkLogs.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("Index","worklogs");
+                    return RedirectToAction("Index", "worklogs");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -120,10 +122,10 @@ namespace ITWorkLogs.Controllers
             // If a user enters incorrect codes for a specified amount of time then the user account 
             // will be locked out for a specified amount of time. 
             // You can configure the account lockout settings in IdentityConfig
-            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent:  model.RememberMe, rememberBrowser: model.RememberBrowser);
+            var result = await SignInManager.TwoFactorSignInAsync(model.Provider, model.Code, isPersistent: model.RememberMe, rememberBrowser: model.RememberBrowser);
             switch (result)
             {
-                case SignInStatus.Success:
+                case SignInStatus.Success:  
                     return RedirectToLocal(model.ReturnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -134,51 +136,91 @@ namespace ITWorkLogs.Controllers
             }
         }
 
+//########################################################################################################################################
+
+        public async Task<ActionResult> Index()
+        {
+            return View(await UserManager.Users. Where(x=>!x.UserName.Contains( "Admin")).ToListAsync());
+        }
+
         //
         // GET: /Account/Register
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         [AllowAnonymous]
         public ActionResult Register()
         {
             //note : admin role is not included :) - jejecruz
-            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin")).ToList(), "Name", "Name");
+            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("SuperAdmin")).ToList(), "Name", "Name");
             return View();
         }
 
         //
         // POST: /Account/Register
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "SuperAdmin,Admin")]
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
+            var user = new ApplicationUser
             {
-                var user = new ApplicationUser { UserName = model.username, Email = model.Email, FullName = model.firstname +" " + model.lastname };
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                UserName = model.username,
+                Email = model.Email,
+                FirstName = model.firstname,
+                LastName = model.lastname,
+                FullName = model.firstname + " " + model.lastname,
+                OpenDate = false // default value
 
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                    await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
-                    return RedirectToAction("Index", "Users");
-                }
-
-                ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin")).ToList(), "Name", "Name");
-                AddErrors(result);
+            };
+            var result = await UserManager.CreateAsync(user, model.Password);
+            if (result.Succeeded)
+            {
+                //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                // Send an email with this link
+                // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
+                return RedirectToAction("Index", "Account");
             }
 
             // If we got this far, something failed, redisplay form
+            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin") && !u.Name.Contains("SuperAdmin")).ToList(), "Name", "Name");
             return View(model);
         }
 
-        //
+        // GET: Branches/Edit/5
+        public async Task<ActionResult> Edit(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ApplicationUser users = await UserManager.Users.FirstOrDefaultAsync(x=>x.Id == id);
+            if (users == null)
+            {
+                return HttpNotFound();
+            }
+            return View(users);
+        }
+
+        // POST: Branches/Edit/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(string id,RegisterViewModel model)
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+
+            ApplicationUser users = await db.Users.FirstOrDefaultAsync(x => x.Id == id);
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
+
+        //###############################################################################################################################
+
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
@@ -196,10 +238,10 @@ namespace ITWorkLogs.Controllers
         [AllowAnonymous]
         public ActionResult ForgotPassword()
         {
+
             return View();
         }
 
-        //
         // POST: /Account/ForgotPassword
         [HttpPost]
         [AllowAnonymous]
@@ -408,6 +450,7 @@ namespace ITWorkLogs.Controllers
         {
             return View();
         }
+
 
         protected override void Dispose(bool disposing)
         {

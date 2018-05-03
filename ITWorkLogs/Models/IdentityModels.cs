@@ -27,25 +27,27 @@ namespace ITWorkLogs.Models
 
         [Display(Name = "Full Name")]
         public string FullName { get; set; }
+        
+        [Required]
+        public bool OpenDate { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
-        { }
+            : base("MySqlConnection", throwIfV1Schema: false)
+        {
+            //comment to not drop database..
+           //Database.SetInitializer(new MySqlInitializer());
+        }
+
         //Tables
         public DbSet<WorkLogs> workLogs { get; set; }
         public DbSet<Branches> branches { get; set; }
-
-        static ApplicationDbContext()
-        {
-            // Set the database intializer which is run once during application start
-            // This seeds the database with admin user credentials and admin role
-
-            //comment to not delete the data
-            Database.SetInitializer<ApplicationDbContext>(new ApplicationDbInitializer());
-        }
+        public DbSet<Sync> sync { get; set; }
+        public DbSet<ref_syncerrors> syncerrror { get; set; }
+        public DbSet<sysOfflines> sysoffline { get; set; }
+        public DbSet<ref_sysOfflines> ref_sysoffline { get; set; }
 
         public static ApplicationDbContext Create()
         {
